@@ -54,6 +54,7 @@ const handleSubmit = async (e) => {
             }
           }}
         />
+        {messageSent && <p className='text-green-500'>Votre message a été bien envoyé.</p>}
         <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' >ENVOYER
         </button>
     </form>

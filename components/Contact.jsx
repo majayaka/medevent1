@@ -24,9 +24,9 @@ const handleSubmit = async (e) => {
 
     if (res.ok) {
       setMessageSent(true);
-      e.target.message.value = '';
     }
 
+    e.target.reset();
     
 
     e.stopPropagation();
@@ -42,20 +42,16 @@ const handleSubmit = async (e) => {
             <input className='border shadow-lg p-3' type="email" name="email" placeholder='Email'/>
         </div>
         <input className='border shadow-lg p-3 w-full my-2' type="text" name="subject" placeholder='Sujet'/>
+        {messageSent && 
+          <div className='text-green-500'>Votre message a été bien envoyé.</div>
+        }
         <textarea
           className='border shadow-lg p-3 w-full'
           cols="30" rows="10"
           name="message"
           placeholder='Message'
           disabled={messageSent}
-          value={messageSent ? 'Votre message a été bien envoyé.' : ''}
-          onChange={(e) => {
-            if (!messageSent) {
-              setMessageSent(false);
-            }
-          }}
         />
-        {messageSent && <p className='text-green-500'>Votre message a été bien envoyé.</p>}
         <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' >ENVOYER
         </button>
     </form>

@@ -46,7 +46,7 @@ const handleSubmit = async (e) => {
           placeholder='Message' 
           disabled={messageSent}
         >
-           {messageSent ? 'Votre message a été bien envoyé.' : ' '}
+           {messageSent && <p>Votre message a été bien envoyé.</p>}
         </textarea>
         <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' >ENVOYER
         </button>

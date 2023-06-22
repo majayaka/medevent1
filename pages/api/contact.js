@@ -1,21 +1,29 @@
-// pages/api/contact.js
-import sgMail from '@sendgrid/mail';
-
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import axios from 'axios';
 
 export default async function handler(req, res) {
   const { name, email, subject, message } = req.body;
 
-  const content = {
-    to: ['floriane.majault@medevent.fr', 'philippe.bouillard@medevent.fr'],
-    from: 'info@medevent.fr',
-    subject: `New Message From ${name} - ${subject}`,
-    text: message,
-    html: `<p>${message}</p>`
+  const sendinblueConfig = {
+    method: 'POST',
+    url: 'https://api.sendinblue.com/v3/smtp/email',
+    headers: {
+      'Content-Type': 'application/json',
+      'api-key': process.env.SENDINBLUE_API_KEY,
+    },
+    data: {
+      sender: { name: 'Your Name', email: 'info@medevent.fr' },
+      to: [
+        { email: 'floriane.majault@medevent.fr' },
+        { email: 'philippe.bouillard@medevent.fr' }
+      ],
+      subject: `New Message From ${name} - ${subject}`,
+      htmlContent: `<p>${message}</p>`,
+      replyTo: { email, name }
+    }
   };
 
   try {
-    await sgMail.send(content);
+    await axios(sendinblueConfig);
     res.status(200).send('Message sent successfully.');
   } catch (error) {
     console.log('ERROR', error);

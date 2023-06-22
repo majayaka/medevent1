@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       'api-key': process.env.SENDINBLUE_API_KEY,
     },
     data: {
-      sender: { name: 'Your Name', email: 'info@medevent.fr' },
+      sender: { name, email: 'info@medevent.fr' },  // Change "Your Name" to the "name" received from req.body
       to: [
         { email: 'yumotoayaka@gmail.com' },
       

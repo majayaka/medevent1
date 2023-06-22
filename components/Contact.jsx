@@ -41,14 +41,14 @@ const handleSubmit = async (e) => {
             <input className='border shadow-lg p-3' type="email" name="email" placeholder='Email'/>
         </div>
         <input className='border shadow-lg p-3 w-full my-2' type="text" name="subject" placeholder='Sujet'/>
-        <textarea 
-          className='border shadow-lg p-3 w-full' 
-          cols="30" rows="10" 
-          name="message" 
-          placeholder='Message' 
+        <textarea
+          className='border shadow-lg p-3 w-full'
+          cols="30" rows="10"
+          name="message"
+          placeholder='Message'
           disabled={messageSent}
           value={messageSent ? 'Votre message a été bien envoyé.' : ''}
-          readOnly
+          onChange={(e) => setMessageSent(false)}
         />
         <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' >ENVOYER
         </button>

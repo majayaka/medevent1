@@ -47,9 +47,8 @@ const handleSubmit = async (e) => {
           name="message" 
           placeholder='Message' 
           disabled={messageSent}
-        >
-           {messageSent && <p>Votre message a été bien envoyé.</p>}
-        </textarea>
+          value={messageSent ? 'Votre message a été bien envoyé.' : ''}
+        />
         <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' >ENVOYER
         </button>
     </form>

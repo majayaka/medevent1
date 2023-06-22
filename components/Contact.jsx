@@ -2,6 +2,8 @@ import React from 'react'
 
 const Contact = () => {
 
+const [messageSent, setMessageSent] = useState(false);
+
 const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -20,8 +22,12 @@ const handleSubmit = async (e) => {
       },
     });
 
+    if (res.ok) {
+      setMessageSent(true);
+    }
+
     e.target.reset();
-    console.log(res.status);
+
   };
 
   return (
@@ -34,7 +40,9 @@ const handleSubmit = async (e) => {
         </div>
         <input className='border shadow-lg p-3 w-full my-2' type="text" name="subject" placeholder='Sujet'/>
         <textarea className='border shadow-lg p-3 w-full' cols="30" rows="10" name="message" placeholder='Message'></textarea>
-        <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl'>ENVOYER</button>
+        <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' disabled={messageSent}>
+          {messageSent ? 'Message envoyé' : 'ENVOYER'}
+        </button>
     </form>
     </div>
  

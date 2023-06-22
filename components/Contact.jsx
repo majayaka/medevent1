@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Contact = () => {
 
@@ -41,7 +41,7 @@ const handleSubmit = async (e) => {
         <input className='border shadow-lg p-3 w-full my-2' type="text" name="subject" placeholder='Sujet'/>
         <textarea className='border shadow-lg p-3 w-full' cols="30" rows="10" name="message" placeholder='Message'></textarea>
         <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' disabled={messageSent}>
-          {messageSent ? 'Message envoyé' : 'ENVOYER'}
+          {messageSent ? 'Votre message a été bien envoyé.' : 'ENVOYER'}
         </button>
     </form>
     </div>

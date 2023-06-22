@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
         </div>
         <input className='border shadow-lg p-3 w-full my-2' type="text" name="subject" placeholder='Sujet'/>
         {messageSent && 
-          <div className='text-green-500'>Votre message a été bien envoyé.</div>
+          <div className='text-green-500 text-center'>Votre message a été bien envoyé.</div>
         }
         <textarea
           className='border shadow-lg p-3 w-full'

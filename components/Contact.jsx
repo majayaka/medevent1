@@ -24,9 +24,10 @@ const handleSubmit = async (e) => {
 
     if (res.ok) {
       setMessageSent(true);
+      e.target.message.value = '';
     }
 
-    e.target.reset();
+    
 
     e.stopPropagation();
 

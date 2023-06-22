@@ -39,9 +39,16 @@ const handleSubmit = async (e) => {
             <input className='border shadow-lg p-3' type="email" name="email" placeholder='Email'/>
         </div>
         <input className='border shadow-lg p-3 w-full my-2' type="text" name="subject" placeholder='Sujet'/>
-        <textarea className='border shadow-lg p-3 w-full' cols="30" rows="10" name="message" placeholder='Message'></textarea>
-        <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' disabled={messageSent}>
-          {messageSent ? 'Votre message a été bien envoyé.' : 'ENVOYER'}
+        <textarea 
+          className='border shadow-lg p-3 w-full' 
+          cols="30" rows="10" 
+          name="message" 
+          placeholder='Message' 
+          disabled={messageSent}
+        >
+           {messageSent ? 'Votre message a été bien envoyé.' : ' '}
+        </textarea>
+        <button className='border shadow-lg p-3 w-full mt-2 text-[#414382] font-bold text-xl' >ENVOYER
         </button>
     </form>
     </div>

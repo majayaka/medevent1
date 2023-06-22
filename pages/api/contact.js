@@ -13,8 +13,8 @@ export default async function handler(req, res) {
     data: {
       sender: { name: 'Your Name', email: 'info@medevent.fr' },
       to: [
-        { email: 'floriane.majault@medevent.fr' },
-        { email: 'philippe.bouillard@medevent.fr' }
+        { email: 'yumotoayaka@gmail.com' },
+      
       ],
       subject: `New Message From ${name} - ${subject}`,
       htmlContent: `<p>${message}</p>`,

@@ -5,7 +5,7 @@ const Contact = () => {
 const [messageSent, setMessageSent] = useState(false);
 
 const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.persist();
 
     const formData = {
       name: e.target.name.value,

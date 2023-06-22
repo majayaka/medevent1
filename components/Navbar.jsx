@@ -31,7 +31,7 @@ function Navbar() {
         <div className='max-w-[1240px] m-auto flex justify-between items-center p-4'>
             <Link href='/'>
                 <div className="flex items-center"> 
-            <Image src="/logo-tr.png" alt="Logo" width={200} height={100} /> 
+            <Image src="/logo-tr_n.png" alt="Logo" width={200} height={100} /> 
                 </div>
             </Link>
             <ul style={{color:`${textColor}`}} className='hidden sm:flex '>

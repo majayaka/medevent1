@@ -31,13 +31,13 @@ const Mission = () => {
 
   return (
     <motion.div variants={stagger} >
-    <motion.div id="mission" exit={{ opacity:0 }} initial='initial' animate='animate'>
-        <motion.div variants={fadeInUp} className='max-w-[1240px] mx-auto text-center py-10'>
-          <h2 className='text-4xl font-bold text-[#414382] py-20'  >
+    <motion.div id="mission" exit={{ opacity:0 }} initial='initial' animate='animate' class="py-20">
+        <motion.div variants={fadeInUp} className='max-w-[1240px] mx-auto text-center'>
+          <h2 className='text-4xl font-bold text-[#414382] py-20 mt-20'>
             NOTRE MISSION
           </h2>
         </motion.div>
-        <div className="relative">
+        <div className="relative py-2">
           <div className="flex flex-col md:flex-row">
             <div className="img-side mx-auto sm:max-w-none">
               <div className="message-sec-img md:ms-10 md:w-2/3">
@@ -55,7 +55,7 @@ const Mission = () => {
                   </motion.div>
                   <div className="message-sec-name d-flex justify-items-center">
                       <p className=" text-xl pt-2 text-[#414382] text-center">Floriane Majault</p>
-                      <p className='message-sec-name text-xl text-center text-[#15b3f2]'>Gérante</p>
+                      <p className='message-sec-name text-xl text-center text-[#15b3f2]'>Directrice Générale</p>
                   </div>
                 </div>
                 <div className="d-flex justify-items-center py-10">
@@ -79,7 +79,7 @@ const Mission = () => {
             </div>
             <motion.div variants={fadeInUp} className="px-0 sm:px-20 pt-5 sm:pt-0">
               <div className='p-10'>
-                <h3 className="move sec-ttl text-justify-sm text-justify-md text-3xl font-bold text-white">Créée en 2003, MEDevent est une société spécialisée dans la médicalisation d&apos;événements. MEDevent assure la sécurité médicale des événements.</h3>
+                <h3 className="move sec-ttl text-justify-sm text-justify-md text-3xl font-bold text-white">Créée en 2003, MEDevent est une société spécialisée dans la médicalisation d&apos;événements et assure ainsi la sécurité de votre manifestation.</h3>
               </div>
               <motion.div variants={fadeInUp} >
                 <div className='px-10'>

@@ -51,9 +51,6 @@ function Navbar() {
                     <Link href='/#references'>NOS REFERENCES</Link>
                 </li>
                 <li className='p-4 text-l'>
-                    <Link href='/#evenements'>EVENEMENTS</Link>
-                </li>
-                <li className='p-4 text-l'>
                     <Link href='/contact/#contact'>CONTACT</Link>
                 </li>
             </ul>
@@ -88,9 +85,6 @@ function Navbar() {
                 </li>
                 <li onClick={handleNav} className='p-4 text-4xl text-[#15b3f2] hover:text-[#414382]'>
                     <Link href='/#references'>NOS REFERENCES</Link>
-                </li>
-                <li onClick={handleNav} className='p-4 text-4xl  text-[#15b3f2] hover:text-[#414382]'>
-                    <Link href='/#evenements'>EVENEMENTS</Link>
                 </li>
                 <li onClick={handleNav} className='p-4 text-4xl  text-[#15b3f2] hover:text-[#414382]'>
                     <Link href='/contact/#contact'>CONTACT</Link>

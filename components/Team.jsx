@@ -38,7 +38,7 @@ const Team = () => {
         variants={fadeInUp}
         className="max-w-[1240px] mx-auto py-4 text-center "
       >
-        <h2 className="text-4xl font-bold text-[#414382] py-24">
+        <h2 className="text-4xl font-bold text-[#414382] py-24 mt-20">
           L&apos;EQUIPE
         </h2>
       </motion.div>

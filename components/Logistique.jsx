@@ -40,7 +40,7 @@ const easing = [0.6, -0.05, 0.01, 0.99];
             variants={fadeInUp}  
             className='max-w-[1240px] mx-auto py-4 text-center '
             >
-            <h2 className='text-4xl font-bold text-[#414382] py-24'>
+            <h2 className='text-4xl font-bold text-[#414382] py-24 mt-20'>
                 LA LOGISTIQUE
             </h2>
         </motion.div>

@@ -3,9 +3,9 @@ import Hero from '../components/Hero';
 import Slider from '../components/Slider';
 import Mission from '../components/Mission';
 import { SliderData } from '../components/SliderData';
-import Linkedin from '../components/Linkedin';
 import { AnimatePresence } from 'framer-motion';
 import { ScrollContainer } from 'react-scroll-motion';
+
 
 
 export default function Home() {
@@ -23,7 +23,6 @@ export default function Home() {
         <Mission />
       </ScrollContainer>
       <Slider slides={SliderData}/>
-      <Linkedin />
       </AnimatePresence>  
     </div>
   );

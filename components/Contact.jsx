@@ -34,8 +34,8 @@ const handleSubmit = async (e) => {
   };
 
   return (
-    <div id='contact' className='max-w-[1240px] m-auto p-20 h-screen'>
-     <h2  className='text-center text-2xl sm:text-4xl font-bold text-[#414382] m-8  md:py-24 md:mt-20'>CONTACTEZ-NOUS</h2>
+    <div id='contact' className='max-w-[1240px] m-auto p-5 h-screen'>
+     <h2  className='text-center text-2xl sm:text-4xl font-bold text-[#414382] mt-15 py-10  md:py-14 md:mt-20'>CONTACTEZ-NOUS</h2>
     <form className='max-w-[600px] m-auto' onSubmit={handleSubmit}>
         <div className='grid grid-cols-2 gap-2'>
             <input className='border shadow-lg p-3' type="text" name="name" placeholder='Nom'/>

@@ -37,7 +37,7 @@ const Hero = ({ is404Page }) => {
               delay: 0.8,
               ease: [0, 0.71, 0.2, 1.01]
               }}>
-              <Image className="text-center" src="/logo-c.png" alt="Logo" width={100} height={100} />
+              <Image className="text-center" src="/Logo-MedEvent.png" alt="Logo-MedEvent" width={200} height={200} />
               </motion.div>
             </Link>
             <div>
